@@ -6,12 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%- title %></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
   <header class="header">
-    這是 header
+    <div class="container">
+      <div class="header-block">
+        <div class="logo">
+          <a href="index.html">logo</a>
+        </div>
+        <ul class="menu">
+          <li><a href="product.html">系列鏡框</a></li>
+          <li><a href="location.html">門市據點</a></li>
+          <li><a href="blog.html">部落格</a></li>
+          <li><a href="faq.html">常見問題</a></li>
+        </ul>
+        <!-- <button type="button" class="hamburger">
+          <span class="material-icons">
+            menu
+          </span>
+        </button> -->
+      </div>
+    </div>
   </header>
 
   <%- contents %>
