@@ -8,11 +8,11 @@
     @include Phone() {
       flex-direction: column;
       align-items: center;
+      padding: 0px;
     }
   }
 }
 .logo {
-  width: 50%;
   a {
     width: 80px;
     height: 48px;
@@ -21,15 +21,19 @@
     @include Phone(){
       margin: 0 auto;
       margin-bottom: 10px;
+      padding: 4px 0px;
     }
   }
 }
 .menu {
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  font-size: $fz-4 ;
-  line-height: $lh-6;
+  justify-content: flex-end;
+  a {
+    padding: 10px 32px;
+    font-size: $fz-4 ;
+    line-height: $lh-6;
+  }
   a:hover {
     font-weight: bold;
   }
@@ -41,9 +45,134 @@
       text-align: center;
     }
     a {
-      padding: 12px 0px;
+
       font-size: $font-size-base;
       line-height: $lh-2;
+    }
+  }
+}
+.footer {
+  background: $red;
+  color: #fff;
+  padding-top: 48px;
+  .nav-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $mb-3;
+  }
+  .nav-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-footerMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $space-base * 2.25;
+    @include Phone() {
+      display: none;
+    }
+    a {
+      font-size: $font-size-base;
+      line-height: $lh-2;
+    }
+    a:hover {
+      font-weight: bold;
+    }
+  }
+  .nav-community {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    @include Phone() {
+      justify-content: flex-end;
+    }
+  }
+  .fb {
+    width: 48px;
+    height: 48px;
+    background: url("../images/ic-social-fb.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include bg-hidden;
+    @include Phone() {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .ig {
+    width: 48px;
+    height: 48px;
+    background: url("../images/ic_social_ig.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include bg-hidden;
+    @include Phone() {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .line {
+    width: 48px;
+    height: 48px;
+    background: url("../images/ic_social_line.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include bg-hidden;
+    @include Phone() {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .contact {
+    li {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+      margin-bottom: $space-base / 2;
+    }
+    a {
+      font-size: $fz-7;
+      line-height: $lh-10;
+      @include Phone() {
+        font-size: $font-size-base;
+        line-height: $lh-2;
+      }
+    }
+  }
+  .footer-text {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    padding: 32px 0px;
+    @include Phone() {
+      padding-top: 16px;
+      padding-bottom: 24px;
+      flex-direction: column;
+    }
+    .copyright {
+      font-size: $font-size-base;
+      line-height: $lh-2;
+      @include Phone() {
+        margin-bottom: $space-base / 2;
+      }
+    }
+    .service {
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+      @include Phone() {
+        flex-direction: column;
+      }
+      a {
+        font-size: $fz-1;
+        line-height: $lh-1;
+        @include Phone() {
+          margin-bottom: $space-base / 2;
+          font-size: $font-size-base;
+          line-height: $lh-2;
+        }
+      }
     }
   }
 }
